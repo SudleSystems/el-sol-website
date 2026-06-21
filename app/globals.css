@@ -13,6 +13,14 @@
 html {
   scroll-behavior: smooth;
   background-color: #000;
+  background-image: linear-gradient(
+    to bottom,
+    #1a0408 0%,
+    #380858 40%,
+    #0e0230 75%,
+    #030010 100%
+  );
+  background-attachment: scroll;
   overscroll-behavior: none;
 }
 
@@ -22,22 +30,7 @@ body {
 }
 
 body {
-  background-color: #000;
+  background-color: transparent;
   overscroll-behavior: none;
   color: #fff;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    to bottom,
-    #1a0408 0%,
-    #380858 40%,
-    #0e0230 75%,
-    #030010 100%
-  );
-  pointer-events: none;
 }
