@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Bebas_Neue, Inter, Bangers } from "next/font/google";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -15,6 +15,13 @@ const inter = Inter({
   display: "swap",
 });
 
+const bangers = Bangers({
+  weight: "400",
+  variable: "--font-bangers",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "El Sol Mexican Food",
   description:
@@ -25,8 +32,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${bebasNeue.variable} ${inter.variable}`}>
-      <body className="bg-black text-white antialiased">{children}</body>
+    <html lang="en" className={`${bebasNeue.variable} ${inter.variable} ${bangers.variable}`} style={{ backgroundColor: "#000" }} data-scroll-behavior="smooth">
+      <body className="text-white antialiased">{children}</body>
     </html>
   );
 }
