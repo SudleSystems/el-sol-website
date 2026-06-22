@@ -77,22 +77,20 @@ const menuItems = [
   { name: "Taco", image: "/menu-items/taco.png" },
   { name: "Mulitas", image: "/menu-items/mulita.jpg" },
   { name: "Ceviche", image: "/menu-items/ceviche.png" },
-  { name: "Tortas", image: "/menu-items/torta.png" },
-  { name: "Pupusas", image: "/menu-items/papusa.png" },
-  { name: "Burrito", image: "/menu-items/burrito.png" },
+  { name: "Tortas", image: "/menu-items/torta.jpg" },
+  { name: "Pupusas", image: "/menu-items/papusa.jpg" },
+  { name: "Burrito", image: "/menu-items/burrito.jpg" },
   { name: "Sopes", image: "/menu-items/sopes.jpg" },
   { name: "Quesadilla", image: "/menu-items/quesadilla.png" },
   { name: "Gordita", image: "/menu-items/gordita.jpg" },
   { name: "Taco Birria", image: "/menu-items/birria-tacos.jpg" },
-];
-
-const specials: { name: string; image: string | null }[] = [
+  { name: "Nachos", image: "/menu-items/nachos.png" },
+  { name: "Loaded Potato", image: "/menu-items/loaded-potato.jpg" },
   { name: "Corn Cup", image: "/specials/corn-cup.png" },
   { name: "Nacho Fries", image: "/specials/nacho-fries.jpg" },
-  { name: "Potato Twist", image: "/specials/potato-twist.png" },
+  { name: "Potato Twist", image: "/menu-items/potato-twist.jpg" },
   { name: "Taco Salad Bowl", image: "/specials/taco-salad-bowl.jpg" },
-  { name: "Nachos", image: "/menu-items/nachos.png" },
-  { name: "Loaded Potato", image: "/menu-items/loaded-potato.png" },
+  { name: "Cheesy Shrimp Tacos", image: "/menu-items/cheesy-shrimp-tacos.jpg" },
 ];
 
 const otherDrinks = [
@@ -226,25 +224,6 @@ export default function Home() {
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
                 {menuItems.map((item) => (
                   <PhotoCard key={item.name} name={item.name} image={item.image} />
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* ── SPECIALS ── */}
-          <section id="specials" className="py-24 px-4 sm:px-6">
-            <div className="max-w-7xl mx-auto">
-              <SectionHeader
-                eyebrow="Favoritos del Camión"
-                heading="Especiales"
-              />
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
-                {specials.map((item) => (
-                  <PhotoCard
-                    key={item.name}
-                    name={item.name}
-                    image={item.image}
-                  />
                 ))}
               </div>
             </div>
